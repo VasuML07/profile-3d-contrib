@@ -15,4 +15,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: VasuML07
           MAX_REPOS: 100
-          EXCLUDE: ["VasuML07"]
