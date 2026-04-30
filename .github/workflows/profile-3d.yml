@@ -1,0 +1,18 @@
+name: Profile 3D Contributions
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate 3D contribution graph
+        uses: yurafonseca/profile-3d-contrib@0046c00f5b54f5850e5f0d29d13a3775abbd22a3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: VasuML07
+          MAX_REPOS: 100
+          EXCLUDE: ["VasuML07"]
